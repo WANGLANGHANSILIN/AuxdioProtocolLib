@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_control_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_control_back_android"
+            android:padding="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/tv_control_room_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="房间名"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:textSize="22sp"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_control_src_seletor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_control_icon_src"
+            android:padding="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:addStatesFromChildren="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_control_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="死了都要爱"
+            android:gravity="center"
+            android:maxLines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_control_src_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_control_cent_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_src"
+        android:minHeight="45dp"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:id="@+id/ll_music_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/iv_control_music_file"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_control_file"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_control_music_previous"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_control_previous1"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_control_music_play"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_playstate_play"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_control_music_next"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_control_nex1t"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_control_music_playmodle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/ic_playmodel_single_play"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_progress_seek"
+        android:layout_above="@id/ll_music_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_seek_time_current_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"/>
+        <SeekBar
+            android:id="@+id/sb_control_pro_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"/>
+        <TextView
+            android:id="@+id/tv_seek_time_total_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_progress_seek"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/iv_control_music_mute"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_control_notification_fill"/>
+
+        <SeekBar
+            android:id="@+id/sb_control_volume"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
